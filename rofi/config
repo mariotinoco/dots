@@ -1,0 +1,19 @@
+# █▓▒░  General
+rofi.font:               Source Code Pro 18
+rofi.hide-scrollbar:     true
+
+#█▓▒░
+#█▓▒░  Layout
+rofi.width:              30
+rofi.location:           0
+rofi.lines:              10
+rofi.padding:            18
+rofi.sidebar-mode:       false
+rofi.fullscreen:         false
+
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+
+#window {
+        bordre: 4px solid #ff3300;
+}
+
