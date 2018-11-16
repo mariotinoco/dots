@@ -1,0 +1,57 @@
+﻿
+# █
+# █ Bindings
+# █
+
+
+# █▓ Reload BSPWM RC
+
+super + shift + r                
+	./.config/bspwm/bspwmrc
+
+
+# █▓ Window Manipulation
+
+
+# █▓▒ Kill or Close Node
+super + {k,c}
+      bspc node -{k,c}
+
+# █▓▒ Desktop focus {and move}
+
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f,node -d} ^{1-9,10}
+
+# █▓▒ Hide and Unhide
+
+super + h
+    whid hide
+
+super + shift + h
+    whid dmenu
+
+# █▓▒ Move to preselect or largest
+
+super + Return
+    windowpromoter
+
+# █▓▒ Pre-select split
+
+alt + ctrl + {Left,Down,Up,Right}
+	bspc node -p \~{west,south,north,east} -i
+
+# Remove empty nodes
+super + BackSpace
+  for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done
+
+
+# █▓ Lauchers
+
+super + space
+      rofi -show drun
+
+super + z
+      default-terminal
+
+
+
