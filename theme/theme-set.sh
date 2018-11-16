@@ -4,6 +4,7 @@ wal -i ~/theme/themes/$1
 
 . "${HOME}/.cache/wal/colors.sh"
 
+xrdb ~/.Xresources
 xrdb -merge ${HOME}/.cache/wal/colors.Xresources
 
 bspc config normal_border_color   "$color1"

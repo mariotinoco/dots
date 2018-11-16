@@ -7,11 +7,15 @@
 # █▓ Reload BSPWM RC
 
 super + shift + r                
-	./.config/bspwm/bspwmrc
+	~/.config/bspwm/bspwmrc
 
 
 # █▓ Window Manipulation
 
+
+# Move Window
+super + shift + {Left,Down,Up,Right}
+      ~/bin/euclid_mover {west,south,north,east}
 
 # █▓▒ Kill or Close Node
 super + {k,c}
@@ -32,13 +36,13 @@ super + shift + h
 
 # █▓▒ Move to preselect or largest
 
-super + Return
-    windowpromoter
+super + p
+    ~/bin/windowpromoter
 
 # █▓▒ Pre-select split
 
 alt + ctrl + {Left,Down,Up,Right}
-	bspc node -p \~{west,south,north,east} -i
+	bspc node -p \~{west,south,north,east}
 
 # Remove empty nodes
 super + BackSpace
@@ -50,8 +54,6 @@ super + BackSpace
 super + space
       rofi -show drun
 
-super + z
-      default-terminal
-
-
+super + Return
+      urxvt
 

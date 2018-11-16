@@ -120,4 +120,5 @@
 ;; -
 (setq-default neo-show-hidden-files t)
 
+(setq-default vc-follow-symlinks t)
 
